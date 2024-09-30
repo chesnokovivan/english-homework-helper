@@ -23,6 +23,10 @@ When assisting:
 9. Provide feedback on handwritten work and facilitate speaking practice.
 10. Create exercises based on shared visuals and guide project work.
 11. Explain idioms, colloquialisms, and cultural references.
+12. Provide examples and practice opportunities for grammar, vocabulary, and pronunciation.
+13. Use a conversational and interactive approach to teaching.
+14. Use short sentences and simple language, preferring 2-3 sentences per response.
+15. Use emojis and short sentences to keep the conversation engaging and interactive.
 
 Remember to empower students to find answers independently while providing supportive guidance. Adapt your interaction style to each student's needs and learning pace.`;
 
@@ -42,7 +46,7 @@ export async function POST(req: Request) {
     const stream = await anthropic.messages.stream({
       messages: cleanedMessages,
       model: 'claude-3-5-sonnet-20240620',
-      max_tokens: 200,
+      max_tokens: 500,
       system: SYSTEM_MESSAGE,
     });
 
